@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-token: "Space Mono", monospace;
+  
+  --color-ink: #0b2e2a;
+  --color-teal: #0e6e5c;
+  --color-teal-deep: #093f34;
+  --color-mist: #f4f8f6;
+  --color-paper: #fdfcf9;
+  --color-seal: #e0522b;
+  --color-seal-soft: #f6d9cd;
+  --color-muted: #5c6d69;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: theme("colors.mist");
+    font-family: theme("fontFamily.sans");
+    color: theme("colors.ink");
+    -webkit-font-smoothing: antialiased;
+  }
+}
