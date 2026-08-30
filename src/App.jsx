@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import HospitalSearchPage from './HospitalSearchPage';
+import BookingPage from './BookingPage';
 
 export default function App() {
   return (
