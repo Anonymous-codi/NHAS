@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const mockHospitals = [
   {
@@ -72,6 +74,7 @@ const specialties = [
 ];
 
 export default function HospitalSearchPage() {
+  const navigate = useNavigate();
   const [searchText, setSearchText] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('All locations');
   const [selectedSpecialty, setSelectedSpecialty] = useState('All specialties');
@@ -218,7 +221,9 @@ export default function HospitalSearchPage() {
                 </div>
 
                 {/* View Slots Button */}
-                <button className="w-full bg-teal text-white py-2 rounded-lg font-sans font-medium hover:bg-teal-deep active:bg-teal-deep transition-colors">
+                <button 
+                 onClick={() => navigate(`/book/${hospital.id}`)}
+                 className="w-full bg-teal text-white py-2 rounded-lg font-sans font-medium hover:bg-teal-deep active:bg-teal-deep transition-colors">
                   View slots
                 </button>
               </div>
