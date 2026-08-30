@@ -9,6 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<AuthPage />} />
         <Route path="/search" element={<HospitalSearchPage />} />
+        <Route path="/book/:hospitalId" element={<BookingPage />} />
       </Routes>
     </BrowserRouter>
   );
