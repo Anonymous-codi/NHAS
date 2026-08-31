@@ -71,14 +71,19 @@ export default function BookingPage() {
     setSelectedSlot(null)
   }
 
-  const handleProceed = () => {
-    console.log('Booking selection:', {
+
+const handleProceed = () => {
+  navigate('/payment', {
+    state: {
       hospitalId,
-      doctor: selectedDoctor.name,
+      hospitalName: mockHospitalData.name,
+      doctorName: selectedDoctor.name,
+      specialty: selectedDoctor.specialty,
       fee: selectedDoctor.fee,
       slot: selectedSlot,
-    })
-  }
+    },
+  })
+}
 
   const canProceed = selectedDoctor && selectedSlot
 
